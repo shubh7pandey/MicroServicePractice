@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+
 @Service
 public class BookServiceImpl implements BookService {
 
@@ -108,6 +109,6 @@ public class BookServiceImpl implements BookService {
             be.setAvailableQty (newQty);
             be = bookRepository. save(be);
         }
-        return newQty;
+        return "success";
     }
 }
