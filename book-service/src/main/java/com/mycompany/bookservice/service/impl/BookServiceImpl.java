@@ -97,4 +97,17 @@ public class BookServiceImpl implements BookService {
         }
         return bookDTO;
     }
+
+    @Override
+    public String updateBookAvailableQuantity(Long bookId) {
+        Optional<BookEntity> optEntity = bookRepository.findById(bookId);
+        BookEntity be = null;
+        if(optEntity.isPresent()){
+            be = optEntity.get();
+            Double newQty=be.getAvailableQty()-1;
+            be.setAvailableQty (newQty);
+            be = bookRepository. save(be);
+        }
+        return newQty;
+    }
 }

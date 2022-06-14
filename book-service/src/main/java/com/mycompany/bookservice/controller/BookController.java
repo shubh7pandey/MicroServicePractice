@@ -52,6 +52,13 @@ public class BookController {
         return responseEntity;
     }
 
+    @PatchMapping("/bookqty/{bookId}")
+    public ResponseEntity<String> updateBookAvailableQuantity(@RequestBody BookDTO bookDTO, @PathVariable Long bookId){
+        String result= bookService.updateBookAvailableQuantity(bookId);
+        ResponseEntity<String> responseEntity = new ResponseEntity<>(result, HttpStatus.OK);
+        return responseEntity;
+    }
+
     @DeleteMapping("/books/{bookId}")
     public HttpStatus deleteBook(@PathVariable Long bookId){
         bookService.deleteBook(bookId);
