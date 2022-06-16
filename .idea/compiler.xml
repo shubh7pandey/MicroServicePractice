@@ -12,12 +12,14 @@
         <module name="order-service" />
         <module name="book-service" />
         <module name="discovery-service" />
+        <module name="hystrix-dashboard" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="api-gateway" target="11" />
       <module name="book-service" target="11" />
       <module name="discovery-service" target="11" />
+      <module name="hystrix-dashboard" target="11" />
       <module name="order-service" target="11" />
       <module name="user-service" target="11" />
     </bytecodeTargetLevel>
@@ -27,6 +29,7 @@
       <module name="api-gateway" options="-parameters" />
       <module name="book-service" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
+      <module name="hystrix-dashboard" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
